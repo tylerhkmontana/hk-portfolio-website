@@ -1,0 +1,23 @@
+@import '../app/theme.module.scss';
+
+.resume {
+  @extend %block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    color: transparent;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.514),
+      0px -1px 0px rgba(83, 83, 83, 0.692);
+  }
+
+  img {
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+}

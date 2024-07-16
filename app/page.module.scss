@@ -1,0 +1,19 @@
+@import './theme.module.scss';
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  gap: 30px;
+  padding: 30px;
+}
+
+.dummy {
+  @extend %block;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}

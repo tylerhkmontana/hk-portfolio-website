@@ -1,0 +1,83 @@
+@import '../app/theme.module.scss';
+
+$animationSpeed: 40s;
+$iconWidth: 150px;
+$numIcons: 8;
+
+// Animation
+@keyframes scroll-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1 * $iconWidth * $numIcons);
+  }
+}
+
+@keyframes scroll-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX($iconWidth * $numIcons);
+  }
+}
+
+.skills {
+  @extend %block;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+// Styling
+.slider_to_left {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .slide_track {
+    animation: scroll-to-left $animationSpeed linear infinite;
+    display: flex;
+    width: $numIcons * $iconWidth * 2;
+  }
+
+  .slide {
+    height: 50px;
+    width: $iconWidth;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.slider_to_right {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  .slide_track {
+    animation: scroll-to-right $animationSpeed linear infinite;
+    display: flex;
+
+    width: $numIcons * $iconWidth * 2;
+  }
+
+  .slide {
+    height: 50px;
+    width: $iconWidth;
+
+    img {
+      height: 100%;
+    }
+  }
+}
