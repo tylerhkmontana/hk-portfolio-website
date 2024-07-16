@@ -6,6 +6,7 @@ import ReachMe from '@/components/ReachMe';
 import Resume from '@/components/Resume';
 import Cert from '@/components/Cert';
 import Projects from '@/components/Projects';
+import Widgets from '@/components/Widgets'
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
 
       <Projects col_start={3} col_end={6} row_start={3} row_end={8} />
 
-      <div className={styles.dummy}></div>
+      <Widgets col_start={1} col_end={3} row_start={6} row_end={8}/>
     </main>
   );
 }

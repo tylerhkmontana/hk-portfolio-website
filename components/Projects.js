@@ -20,7 +20,13 @@ export default function Projects({ col_start, col_end, row_start, row_end }) {
   return (
     <div className={styles.projects} style={grid_template}>
       <div className={styles.contents}>
-        <h2>{currProj.title}</h2>
+        <h2>Projects</h2>
+        <div className={styles.showcase}>
+          <div className={styles.project_title}>
+            <img src={currProj.icon_url}/>
+          <h3>{currProj.title}</h3>
+          </div>
+        </div>
       </div>
       <ul className={styles.projects_nav}>
         {projects.map((proj, i) => (

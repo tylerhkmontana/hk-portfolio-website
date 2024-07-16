@@ -94,6 +94,7 @@
 .competencies {
   display: flex;
   flex-wrap: wrap;
+  overflow-y: auto;
   gap: 10px;
 
   span {
