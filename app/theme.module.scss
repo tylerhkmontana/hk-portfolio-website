@@ -6,10 +6,12 @@ $fontColor: #5f5f5f;
 $accentColor: white;
 
 @mixin neumorphism($distance, $blur, $intensity, $inset: false) {
-  box-shadow: $distance $distance $blur mix(#5a5a5ab3, transparent, $intensity)
-      if($inset, inset, null),
-    -#{$distance} -#{$distance} $blur mix(#ffffffaf, transparent, $intensity)
-      if($inset, inset, null);
+  // box-shadow: $distance $distance $blur mix(#5a5a5ab3, transparent, $intensity)
+  //     if($inset, inset, null),
+  //   -#{$distance} -#{$distance} $blur mix(#ffffffaf, transparent, $intensity)
+  //     if($inset, inset, null);
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.45),
+    1px 1px 2px rgba(94, 104, 121, 0.3);
 }
 
 %inner-neumorphism {
