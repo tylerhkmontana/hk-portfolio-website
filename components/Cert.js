@@ -8,11 +8,9 @@ export default function Cert({ col_start, col_end, row_start, row_end }) {
     gridRowEnd: row_end,
   };
   return (
-    <div className={styles.cert} style={grid_template}>
+    <a className={styles.cert} style={grid_template} href="./certificate.pdf" target="_blank">
       <img src="./icons/ibm.png" />
-      <a href="./certificate.pdf" target="_blank">
         <h2>Full Stack Software Developer Certificate</h2>
-      </a>
-    </div>
+    </a>
   );
 }

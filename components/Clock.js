@@ -1,6 +1,8 @@
+'use client'
+
 import { useEffect } from 'react';
 import styles from './Clock.module.scss';
-export default function Clock() {
+export default function Clock({ col_start, col_end, row_start, row_end }) {
   useEffect(() => {
     var inc = 1000;
 
@@ -28,7 +30,15 @@ export default function Clock() {
 
     setInterval(clock, inc);
   }, []);
+
+  const grid_template = {
+    gridColumnStart: col_start,
+    gridColumnEnd: col_end,
+    gridRowStart: row_start,
+    gridRowEnd: row_end,
+  };
   return (
+    <div className={styles.clock_container} style={grid_template}>
     <div className={styles.clock}>
       <div className={styles.wrap}>
         <span id="hour" className={styles.hour}></span>
@@ -36,6 +46,7 @@ export default function Clock() {
         <span id="second" className={styles.second}></span>
         <span className={styles.dot}></span>
       </div>
+    </div>
     </div>
   );
 }

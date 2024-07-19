@@ -20,4 +20,10 @@
     top: 5px;
     right: 10px;
   }
+
+  &:active {
+    @extend %inner-neumorphism;
+    transition: .3s;
+  }
 }
+
