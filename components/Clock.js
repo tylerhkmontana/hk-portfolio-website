@@ -28,7 +28,9 @@ export default function Clock({ col_start, col_end, row_start, row_end }) {
       ).style.transform = `rotate(${second}deg)`;
     }
 
-    setInterval(clock, inc);
+    const ticking = setInterval(clock, inc);
+
+    return clearInterval(ticking)
   }, []);
 
   const grid_template = {

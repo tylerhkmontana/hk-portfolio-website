@@ -3,10 +3,6 @@
 import styles from "./WeatherUI.module.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Image from "next/image";
-
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
-const apiKey = "95e1426f2cc4d186ea30416c925a8393";
 
 export default function WeatherUI({ col_start, col_end, row_start, row_end }) {
   const [geoLoc, setGeoLoc] = useState({
@@ -27,20 +23,17 @@ export default function WeatherUI({ col_start, col_end, row_start, row_end }) {
 
     axios
       .get(
-        `${apiUrl}lat=${geoLoc.lat}&lon=${geoLoc.lon}&appid=${apiKey}&units=imperial`
+        `/api/weather?lat=${geoLoc.lat}&lon=${geoLoc.lon}`
       )
       .then((response) => {
         setWeather(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  function weatherCodeToGIF(code) {
-    console.log(code)
-   
+  function weatherCodeToGIF(code) {   
       if(code >= 200 && code <= 232)
         return "/weather_gifs/thunderstorm.gif";
       else if(code >= 300 && code <= 511)
@@ -84,7 +77,7 @@ export default function WeatherUI({ col_start, col_end, row_start, row_end }) {
               <h4>{Math.ceil(weather.main.temp)} °F</h4>
               <p>{weather.weather[0].description}</p>
             </div>
-            
+
             <div className={styles.loc_date}>
               <h3>{weather.name}</h3>
               <p>{new Date().toString().split(" ").slice(0, 4).join(" ")}</p>

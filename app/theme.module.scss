@@ -20,6 +20,11 @@ $accentColor: white;
   border-radius: 20px;
   padding: 20px;
   @extend %neumorphism;
+
+  @media (max-width:767px) {
+    padding: 20px;
+    border-radius: 5px;
+  }
 }
 
 %engraving-effect {

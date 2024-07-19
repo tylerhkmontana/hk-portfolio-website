@@ -25,14 +25,13 @@ $numIcons: 8;
 
 .skills {
   @extend %block;
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // overflow-x: hidden;
   gap: 50px;
 }
 
