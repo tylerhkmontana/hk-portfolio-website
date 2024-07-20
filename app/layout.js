@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>Hyunbin Kim's Portfolio Website</title>
+        <link rel='icon' href='/project_icons/tylerkim-design.png'></link>
         </Head>
       <body className={inter.className}>{children}</body>
     </html>
