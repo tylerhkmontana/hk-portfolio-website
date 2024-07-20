@@ -12,10 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <title>Hyunbin Kim's Portfolio Website</title>
         <link rel='icon' href='/project_icons/tylerkim-design.png'></link>
-        </Head>
+        </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
