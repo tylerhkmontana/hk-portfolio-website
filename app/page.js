@@ -80,14 +80,14 @@ export default function Home() {
         row_end={gridTemplate.skills[3]}
       />
 
-      {!isMobile && (
+      {/* {!isMobile && (
         <WeatherUI
           col_start={gridTemplate.weatherUI[0]}
           col_end={gridTemplate.weatherUI[1]}
           row_start={gridTemplate.weatherUI[2]}
           row_end={gridTemplate.weatherUI[3]}
         />
-      )}
+      )} */}
 
       <Projects
         col_start={gridTemplate.projects[0]}
