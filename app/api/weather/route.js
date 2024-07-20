@@ -9,5 +9,5 @@ export async function GET(request) {
     })
     const weather = await res.json()
 
-    return Response.json({ ...weather })
+    return Response.json(weather)
 }
